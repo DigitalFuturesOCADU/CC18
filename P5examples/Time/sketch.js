@@ -1,7 +1,6 @@
 /*
 Creation & Compuation - Kate Hartman
 Time
-Fall 2017
 
 */
 

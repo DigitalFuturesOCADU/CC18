@@ -1,7 +1,6 @@
 /*
 Creation & Computation - Kate Hartman
-Click Colors
-Fall 2016
+ColorShake
 */
 
 function setup() {

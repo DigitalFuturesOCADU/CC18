@@ -1,7 +1,6 @@
 /*
 Creation & Computation - Kate Hartman
 Kate head new
-Fall 2017
 */
 
 

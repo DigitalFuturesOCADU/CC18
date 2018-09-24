@@ -1,3 +1,8 @@
+/*
+Creation & Computation - Kate Hartman
+Sound Example
+*/
+
 var rooster;
 var survive;
 

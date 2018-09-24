@@ -1,7 +1,6 @@
 /*
 Creation & Compuation - Kate Hartman
 Draw Grid
-Fall 2016
 
 move mouse along X & Y to change grid spacing
 */

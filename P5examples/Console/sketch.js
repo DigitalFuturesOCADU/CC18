@@ -1,7 +1,6 @@
 /*
-Creation & Compuation - Kate Hartman
+Creation & Computation - Kate Hartman
 Console
-Fall 2016
 */
 
 function setup() {

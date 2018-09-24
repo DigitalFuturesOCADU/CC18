@@ -1,4 +1,9 @@
-ar playing = false;
+/*
+Creation & Computation - Kate Hartman
+Video Example
+*/
+
+var playing = false;
 var fingers;
 var button;
 

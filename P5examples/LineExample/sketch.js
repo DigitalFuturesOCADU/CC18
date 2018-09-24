@@ -1,3 +1,9 @@
+/*
+Creation & Computation - Kate Hartman
+Line Example
+
+*/
+
 var linex1 = 0;
 var liney1 = 50;
 var linex2 = 300;

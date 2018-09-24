@@ -1,7 +1,6 @@
 /*
 Creation & Compuation - Kate Hartman
 Self Portrait
-Fall 2016
 */
 
 var eyeSpacing;

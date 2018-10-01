@@ -1,13 +1,10 @@
-<<<<<<< HEAD
 
-=======
 /*
 Creation & Computation - Kate Hartman
 Sound Example
 */
 
-var rooster;
->>>>>>> aa06f03edad8f78e2e2c728060fd90cbae21c2f8
+
 var survive;
 
 

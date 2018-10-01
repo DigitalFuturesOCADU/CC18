@@ -2,16 +2,35 @@ var lineWidth = 2;
 var textOffset = 10;
 var fontSize;
 
+var ex;
+var ey;
+
 function setup() 
 {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(500, );
 }
 
 function draw() 
 {
 fontSize = height/35;//adjust the size of the font based on the height of the window
+background(255);
+/*
+if((mouseX<=width/2)&&(mouseY<=height/2))
+{	
+background(255,0,0);	//white background
+}
+else if((mouseX>width/2)&&(mouseY<=height/2))
+{	
+background(0,0,255);	//white background
+}
+*/
 
-background(255);	//white background
+else
+{
+background(0,255,0);	
+}
+
+
 stroke(0);			//black lines
 strokeWeight(lineWidth);  // set the width for the lines
 
@@ -43,6 +62,11 @@ text(width/2+"  "+height/2,width/2,height/2-textOffset);	//draw the coordinates 
 fill(255,0,0);												//switch the fill color to red
 text(mouseX+" , "+mouseY,mouseX,mouseY);					//draw the coordinates of the cursor at the cursor
 //
+if(ex!=0&&ey!=0)
+{
+ellipse(ex,ey,100,100);
+}
+
 
 
 
@@ -52,4 +76,11 @@ function windowResized()
 {
   resizeCanvas(windowWidth, windowHeight);
   
+}
+
+function mouseClicked()
+{
+ex = mouseX;
+ey = mouseY;
+
 }

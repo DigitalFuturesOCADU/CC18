@@ -3,7 +3,7 @@ Creation & Computation - Kate Hartman
 Kate head new
 */
 
-
+var img;
 function preload() {
   img = loadImage("assets/katehead.jpg");
 }

@@ -2,7 +2,8 @@
  * Creation & Computation - Digital Futures, OCAD University
  * Kate Hartman / Nick Puckett
  * 
- * Read an Ultrasonic Proximity Sensor using the NewPing Library https://bitbucket.org/teckel12/arduino-new-ping/downloads/
+ * Read an Ultrasonic Proximity Sensor using the NewPing Library 
+ * To install go to "Tools" -> "Manage Libraries" and search for "NewPing"
  * print the value to Serial and scale it using a timer
  * 
  * 

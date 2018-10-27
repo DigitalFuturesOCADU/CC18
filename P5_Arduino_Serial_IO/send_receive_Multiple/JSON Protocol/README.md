@@ -5,6 +5,7 @@ These examples use the JSON data format to send/read data between P5 and Arduino
 [These examples use the standard P5 Serial Server and P5 serial library](https://github.com/vanevery/p5.serialcontrol/releases)
 
 ##Installing arduinojson
+
 In the Arduino IDE go to: Sketch -> Include Library -> Manage Libraries
 Search arduinojson
 **ImportantDo not install the default version.
@@ -47,6 +48,7 @@ To stabilize the send data it MUST be sent at a standard rate.  These examples u
 
 
 ##Reading data into P5
+
 These examples use the standard serial library methods in P5 and simply adds JSON functionality to the receiving function
 
 This uses a receiving funtion called dataReceived
@@ -79,6 +81,7 @@ sensor2 = JSON.parse(rawData).s2;
 .s1 and .s2 are the names of the parameters created on the arduino These parameter names can be anything you want, but they have to match
 
 ## Sending data from p5
+
 The method for sending from P5 is very similar to sending from arduino, but because it is a full function language on a PC, thus there are many more tools available.
 
 

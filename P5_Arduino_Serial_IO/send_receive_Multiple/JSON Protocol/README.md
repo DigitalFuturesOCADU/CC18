@@ -13,7 +13,7 @@ From the dropdown - choose version 5.13.3
 Click Install **
 
 
-## Sending data from Arduino
+# INPUT - Sending data from Arduino
 
 Step1: Allocate a buffer in memory , in this case called  messageBuffer
 Step2: Create the base JSON object, in this case called  p5Send
@@ -47,7 +47,7 @@ This is done to mark the end of the message with a newline \n character
 To stabilize the send data it MUST be sent at a standard rate.  These examples use a timer to acheive this.
 
 
-## Reading data into P5
+## Reading data in P5
 
 These examples use the standard serial library methods in P5 and simply adds JSON functionality to the receiving function
 
@@ -80,7 +80,7 @@ sensor2 = JSON.parse(rawData).s2;
 ```
 .s1 and .s2 are the names of the parameters created on the arduino These parameter names can be anything you want, but they have to match
 
-## Sending data from p5
+# Output - Sending data from P5
 
 The method for sending from P5 is very similar to sending from arduino, but because it is a full function language on a PC, thus there are many more tools available.
 

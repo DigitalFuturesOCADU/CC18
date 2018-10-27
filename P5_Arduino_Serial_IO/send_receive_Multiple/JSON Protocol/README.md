@@ -1,6 +1,6 @@
 # JSON as a data protocol
 
-These examples use the JSON data format to send/read data between P5 and Arduino. JSON is used as a standard protocol on the web for data exchange and thus is integrated into P5 by default.  To encode/decode data on the Arduino side it requires an additional library.  These examples use the  arduinojson library.  www.arduinojson.org
+These examples use the JSON data format to send/read data between P5 and Arduino. JSON is used as a standard protocol on the web for data exchange and thus is integrated into P5 by default.  To encode/decode data on the Arduino side it requires an additional library.  These examples use the  arduinojson library.  [www.arduinojson.org](https://arduinojson.org/v5/doc/)
 
 These examples use the standard P5 Serial Server 
 
@@ -24,10 +24,13 @@ Step2: Create the base JSON object, in this case called  p5Send
 
 Step3: Add a named paramter to the JSON object and assign it a value
 
-This example adds a parameter named "s1" to the p5Send object and assign it the value from reading a button
-You read the value in P5 by knowing the name of this parameter
+This uses 2 parameters
+s1
+s2
+
 ```arduino
 p5Send["s1"]=buttonValue; 
+p5Send["s2"]=anaValue;  
 ```
 
 To send the json over the serial port we use the built in .printTo(Serial) function that is part of the arduinojson library

@@ -2,14 +2,14 @@
 
 These examples use the JSON data format to send/read data between P5 and Arduino. JSON is used as a standard protocol on the web for data exchange and thus is integrated into P5 by default.  To encode/decode data on the Arduino side it requires an additional library.  These examples use the  arduinojson library.  [www.arduinojson.org](https://arduinojson.org/v5/doc/)
 
-These examples use the standard P5 Serial Server 
+[These examples use the standard P5 Serial Server and P5 serial library](https://github.com/vanevery/p5.serialcontrol/releases)
 
 ##Installing arduinojson
 In the Arduino IDE go to: Sketch -> Include Library -> Manage Libraries
 Search arduinojson
-***Important*** Do not install the default version.
+**ImportantDo not install the default version.
 From the dropdown - choose version 5.13.3
-Click Install
+Click Install**
 
 
 ##Sending data from Arduino

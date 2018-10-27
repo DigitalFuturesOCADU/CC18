@@ -4,16 +4,16 @@ These examples use the JSON data format to send/read data between P5 and Arduino
 
 [These examples use the standard P5 Serial Server and P5 serial library](https://github.com/vanevery/p5.serialcontrol/releases)
 
-##Installing arduinojson
+## Installing arduinojson
 
 In the Arduino IDE go to: Sketch -> Include Library -> Manage Libraries
 Search arduinojson
-**ImportantDo not install the default version.
+** ImportantDo not install the default version.
 From the dropdown - choose version 5.13.3
-Click Install**
+Click Install **
 
 
-##Sending data from Arduino
+## Sending data from Arduino
 
 Step1: Allocate a buffer in memory , in this case called  messageBuffer
 Step2: Create the base JSON object, in this case called  p5Send
@@ -47,7 +47,7 @@ This is done to mark the end of the message with a newline \n character
 To stabilize the send data it MUST be sent at a standard rate.  These examples use a timer to acheive this.
 
 
-##Reading data into P5
+## Reading data into P5
 
 These examples use the standard serial library methods in P5 and simply adds JSON functionality to the receiving function
 
@@ -120,7 +120,7 @@ The actual sending functionality is done via a setInterval command which is nati
                                     //in this case we use it to execute the sendData function we do this to stabilize the send function 
 ``` 
 
-##Reading the data into arduino
+## Reading the data into arduino
 
 We use the same arduinojson library to do this, and simlar to the other direction we use the parameter name to get the value
 ```arduino

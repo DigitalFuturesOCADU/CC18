@@ -8,9 +8,12 @@ These examples use the JSON data format to send/read data between P5 and Arduino
 
 In the Arduino IDE go to: Sketch -> Include Library -> Manage Libraries
 Search arduinojson
-** ImportantDo not install the default version.
+
+**Important** 
+
+Do not install the default version.
 From the dropdown - choose version 5.13.3
-Click Install **
+Click Install 
 
 
 # INPUT - Sending data from Arduino

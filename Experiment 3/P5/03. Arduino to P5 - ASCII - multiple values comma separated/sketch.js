@@ -10,7 +10,7 @@
 var serial;       //variable to hold the serial port object
 var ardVal = [];  //array that will hold all values coming from arduino
 
-var serialPortName = "COM7";        //FOR PC it will be COMX on mac it will be something like "/dev/cu.usbmodemXXXX"
+var serialPortName = '/dev/cu.usbmodem1421';        //FOR PC it will be COMX on mac it will be something like "/dev/cu.usbmodemXXXX"
                                     //Look at P5 Serial to see the available ports
 
 function setup() {

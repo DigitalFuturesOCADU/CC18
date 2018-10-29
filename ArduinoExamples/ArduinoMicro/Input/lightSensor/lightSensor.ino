@@ -33,12 +33,12 @@ int currentLightValue = analogRead(ldrPin);  //read the value from the light sen
     Serial.println("BRIGHTER");
   }
   
-  else
+  /*else
   { 
   Serial.println("SAME");
   }
 
-
+*/
  
 
 }

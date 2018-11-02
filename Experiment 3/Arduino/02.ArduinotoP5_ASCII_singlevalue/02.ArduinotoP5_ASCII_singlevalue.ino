@@ -1,4 +1,15 @@
-void setup() {
+/*
+ * Creation & Computation - Digital Futures, OCAD University
+ * Kate Hartman / Nick Puckett
+ * Experiment 3 - Example 02. Arduino to P5.js - sending single value as a ASCII
+ * 
+ * Based on "Lab: Serial Input to P5.js" on ITP Physical Computing site
+ * https://itp.nyu.edu/physcomp/labs/labs-serial-communication/lab-serial-input-to-the-p5-js-ide/
+ * 
+ * Circuit: (1) potentiometer connected to pin A0
+ */
+ 
+ void setup() {
  Serial.begin(9600); // initialize serial communications
 }
  

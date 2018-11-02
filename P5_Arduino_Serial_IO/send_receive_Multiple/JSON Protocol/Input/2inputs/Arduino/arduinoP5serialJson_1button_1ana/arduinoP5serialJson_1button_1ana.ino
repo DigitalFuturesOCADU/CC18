@@ -37,8 +37,10 @@ if(millis()-lastSend>=sendRate)                           //use a timer to stabl
   
   p5Send["s1"]=buttonValue;                               //assign buttonValue to the key "s1" in the json object
   p5Send["s2"]=anaValue;                                  //assign anaValue to the key "s2" in the json object 
+  
 
-  p5Send.printTo(Serial);                                 //print JSON object as a string
+  
+  p5Send.prettyPrintTo(Serial);                                 //print JSON object as a string
   Serial.println();                                       //print a \n character to the serial port to distinguish between objects
 
 lastSend = millis();

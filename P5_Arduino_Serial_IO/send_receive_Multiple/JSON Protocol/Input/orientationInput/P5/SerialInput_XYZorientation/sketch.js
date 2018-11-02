@@ -87,7 +87,7 @@ function dataReceived()   //this function is called every time data is received
 {
   
     var rawData = serial.readStringUntil('\r\n'); //read the incoming string until it sees a newline
-    //console.log(rawData);                       //uncomment this line to see the incoming string in the console     
+    console.log(rawData);                       //uncomment this line to see the incoming string in the console     
     if(rawData.length>1)                          //check that there is something in the string
     {                                               
       xAngle = JSON.parse(rawData).oX;            //the name of parameter must match the one created in Arduino

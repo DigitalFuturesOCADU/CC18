@@ -18,8 +18,7 @@ int LEDpin2 = 10;
 int p5Input1;                                   //these variables hold the input values
 int p5Input2;
 
-unsigned long lastSend;
-int sendRate = 50;
+
 void setup() 
 {
   Serial.begin(9600);                                     //turn on the serial port
@@ -33,7 +32,7 @@ void loop()
   DynamicJsonBuffer messageBuffer(200);                   //create the Buffer for the JSON object        
   JsonObject& p5Read = messageBuffer.parse(Serial);      //create a JsonObject variable and attach it to incoming Serial messages     
  
-  p5Input1 = p5Read["led1"];
+  p5Input1 = p5Read["somethingsomething"];
   p5Input2 = p5Read["led2"];
 
   analogWrite(LEDpin1,p5Input1);

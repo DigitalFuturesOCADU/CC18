@@ -5,7 +5,7 @@ Kate head new
 
 var img;
 function preload() {
-  img = loadImage("assets/katehead.jpg");
+  img = loadImage("katehead.jpg");
 }
 
 function setup() {

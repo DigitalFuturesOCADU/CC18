@@ -1,12 +1,14 @@
 #include "esp_wpa2.h"
 #include <WiFi.h>
 
+// Change SSID and password if you would like to connect to another wifi network.
+
 const char* ssid     = "ocadu-embedded";		//the name of you home network
 const char* password = "internetofthings";	//Wifi password of your home network
 
 void connectStandardWifi()
 {
-    Serial.print("Connecting to Home Wifi ");
+    Serial.print("Connecting to Wifi ");
     Serial.println(ssid);
 
     WiFi.begin(ssid, password);

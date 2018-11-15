@@ -12,8 +12,8 @@
 
 // server variables
 var dataServer;
-var pubKey = 'pub-c-8b0a0cf3-95ea-4548-9789-6f418cb6c8dc';
-var subKey = 'sub-c-5c05ce6e-a685-11e8-a6fb-8693ddbf4771';
+var pubKey = 'pub-c-33c693d9-a9b8-49fa-9cd5-2be9dd17c45b';
+var subKey = 'sub-c-d3295a42-e74e-11e8-9318-4a98695c4421';
 
 //variables for the size and color of your circle
 var brushR;

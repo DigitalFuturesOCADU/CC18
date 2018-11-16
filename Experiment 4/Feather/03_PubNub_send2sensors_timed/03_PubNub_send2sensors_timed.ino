@@ -112,7 +112,7 @@ void publishToPubNub()
   pMessage["sensorVal2"] = sensorVal2;                     //add a new property and give it a value
   pMessage["avgSensorVal1"] = avgSensor1;
   pMessage["avgSensorVal2"] = avgSensor2;
-  pMessage.prettyPrintTo(Serial);   //uncomment this to see the messages in the serial monitor
+  //pMessage.prettyPrintTo(Serial);   //uncomment this to see the messages in the serial monitor
 
 
   int mSize = pMessage.measureLength() + 1;                   //determine the size of the JSON Message
@@ -140,14 +140,14 @@ void publishToPubNub()
   }
   client->stop();                                             //stop the connection
   Serial.print("Successful Publish");
-//  Serial.print("\t");    // prints a tab
-//  Serial.print(whoAmI);
-//  Serial.print("\t");    // prints a tab
-//  Serial.print(sensorVal1);            
-//  Serial.print("\t");    // prints a tab          
-//  Serial.print(sensorVal2);           
-//  Serial.print("\t");    // prints a tab         
-//  Serial.print(avgSensor1);
-//  Serial.print("\t");    // prints a tab
-//  Serial.println(avgSensor2);
+  Serial.print("\t");    // prints a tab
+  Serial.print(whoAmI);
+  Serial.print("\t");    // prints a tab
+  Serial.print(sensorVal1);            
+  Serial.print("\t");    // prints a tab          
+  Serial.print(sensorVal2);           
+  Serial.print("\t");    // prints a tab         
+  Serial.print(avgSensor1);
+  Serial.print("\t");    // prints a tab
+  Serial.println(avgSensor2);
 }

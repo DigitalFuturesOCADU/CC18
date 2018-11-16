@@ -28,7 +28,7 @@ void setup()
   Serial.begin(9600);
   // Add your wifi location - "0" for OCAD or "1" for home.
   // Note: you will need to update the wifiDetails.h file with your home wifi credentials.
-  connectStandardWifi(1);
+  connectStandardWifi(0);
   HTTPClient http;
 
   Serial.print("[HTTP] begin...\n");

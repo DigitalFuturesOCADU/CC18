@@ -139,5 +139,15 @@ void publishToPubNub()
     Serial.write(client->read());
   }
   client->stop();                                             //stop the connection
-  Serial.println("Successful Publish");
+  Serial.print("Successful Publish:");
+  Serial.print("\t");    // prints a tab
+  Serial.print(whoAmI);
+  Serial.print("\t");    // prints a tab
+  Serial.print(sensorVal1);            
+  Serial.print("\t");    // prints a tab          
+  Serial.print(sensorVal2);           
+  Serial.print("\t");    // prints a tab         
+  Serial.print(avgSensor1);
+  Serial.print("\t");    // prints a tab
+  Serial.println(avgSensor2);
 }

@@ -27,15 +27,15 @@
 #include <PubNub.h>
 #include <wifiDetails.h>
 
-
-const static char pubkey[] = "pub-c-33c693d9-a9b8-49fa-9cd5-2be9dd17c45b";  //get this from your PUbNub account
-const static char subkey[] = "sub-c-d3295a42-e74e-11e8-9318-4a98695c4421";  //get this from your PubNub account
+// Kate's PubNub keys
+const static char pubkey[] = "pub-c-01d2100c-45e8-423f-a2c5-58d3da328c8f";  //get this from your PUbNub account
+const static char subkey[] = "sub-c-47af4102-e947-11e8-ba08-f2848cfa311c";  //get this from your PubNub account
 
 const static char pubChannel[] = "sensorValues"; //choose a name for the channel to publish messages to
 
 
 unsigned long lastRefresh = 0;    //used to make the timer work
-int publishRate = 2000;           //how often to update the value on pubnub in milliseconds
+int publishRate = 50;           //how often to update the value on pubnub in milliseconds
 
 
 
@@ -52,8 +52,8 @@ int avgSensor2;
 int counter;
 
 
-
-String whoAmI = "myName";
+// change to your name
+String whoAmI = "Kate";
 
 
 
@@ -112,7 +112,7 @@ void publishToPubNub()
   pMessage["sensorVal2"] = sensorVal2;                     //add a new property and give it a value
   pMessage["avgSensorVal1"] = avgSensor1;
   pMessage["avgSensorVal2"] = avgSensor2;
-  //pMessage.prettyPrintTo(Serial);   //uncomment this to see the messages in the serial monitor
+  pMessage.prettyPrintTo(Serial);   //uncomment this to see the messages in the serial monitor
 
 
   int mSize = pMessage.measureLength() + 1;                   //determine the size of the JSON Message
@@ -139,15 +139,15 @@ void publishToPubNub()
     Serial.write(client->read());
   }
   client->stop();                                             //stop the connection
-  Serial.print("Successful Publish:");
-  Serial.print("\t");    // prints a tab
-  Serial.print(whoAmI);
-  Serial.print("\t");    // prints a tab
-  Serial.print(sensorVal1);            
-  Serial.print("\t");    // prints a tab          
-  Serial.print(sensorVal2);           
-  Serial.print("\t");    // prints a tab         
-  Serial.print(avgSensor1);
-  Serial.print("\t");    // prints a tab
-  Serial.println(avgSensor2);
+  Serial.print("Successful Publish");
+//  Serial.print("\t");    // prints a tab
+//  Serial.print(whoAmI);
+//  Serial.print("\t");    // prints a tab
+//  Serial.print(sensorVal1);            
+//  Serial.print("\t");    // prints a tab          
+//  Serial.print(sensorVal2);           
+//  Serial.print("\t");    // prints a tab         
+//  Serial.print(avgSensor1);
+//  Serial.print("\t");    // prints a tab
+//  Serial.println(avgSensor2);
 }

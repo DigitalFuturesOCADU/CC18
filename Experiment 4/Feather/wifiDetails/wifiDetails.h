@@ -1,17 +1,28 @@
 #include "esp_wpa2.h"
 #include <WiFi.h>
 
-// Change SSID and password if you would like to connect to another wifi network.
+// Location 0: OCAD (this will only work if the MAC address of your device has been registered)
+const char* ssid_ocad     = "ocadu-embedded";   
+const char* password_ocad = "internetofthings";
 
-const char* ssid     = "ocadu-embedded";		//the name of you home network
-const char* password = "internetofthings";	//Wifi password of your home network
+// Location 1: home
+const char* ssid_home     = ""; // add the name for your home network
+const char* password_home = ""; // add the Wifi password for your home network
 
-void connectStandardWifi()
+
+void connectStandardWifi(int location_number)
 {
     Serial.print("Connecting to Wifi ");
-    Serial.println(ssid);
 
-    WiFi.begin(ssid, password);
+    if(location_number == 0){
+        Serial.println(ssid_ocad);
+        WiFi.begin(ssid_ocad, password_ocad);
+    }
+
+    if(location_number == 1){
+        Serial.println(ssid_home);
+        WiFi.begin(ssid_home, password_home);
+    }
 
     while (WiFi.status() != WL_CONNECTED) {
         delay(500);

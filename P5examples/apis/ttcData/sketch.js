@@ -11,7 +11,7 @@ http://webservices.nextbus.com/service/publicJSONFeed?command=routeConfig&a=ttc&
 
 */
 
-var sendURL = 'http://webservices.nextbus.com/service/publicJSONFeed?command=predictions&a=ttc&r=504&s=6593';
+var sendURL = 'http://webservices.nextbus.com/service/publicJSONFeed?command=predictions&a=ttc&r=501&s=7060';
 var tSize = 500;
 
 var minutesTilNext;
@@ -20,6 +20,8 @@ function setup()
 {
 createCanvas(800,500);
 background(255,0,0);
+
+loadJSON(sendURL,nextStreetCar);
 
 }
 
@@ -32,16 +34,16 @@ function draw()
 
 function mousePressed()
 {
-loadJSON(sendURL,somethingRandom);
+loadJSON(sendURL,nextStreetCar);
 
 }
 
-function somethingRandom(ttcInfo)
+function nextStreetCar(ttcInfo)
 {
-	//console.log(ttcInfo.predictions);
+	console.log(ttcInfo.predictions);
 
 	minutesTilNext = ttcInfo.predictions.direction.prediction[0].minutes;
-	var m2 = ttcInfo.predictions.direction.prediction[1].minutes;
+	
 
 	background(255,0,0);
 	fill(255);
@@ -50,5 +52,7 @@ function somethingRandom(ttcInfo)
 	textSize(tSize);
 
 	text(minutesTilNext,width/2,(height/2)+(tSize/4));
-	text(m2,width/2,(height/2)+(tSize/6));
+	textSize(30);
+	text(("minutes until next: "+ ttcInfo.predictions.routeTitle),width/2,(height/2)+(tSize/4)+30);
+	text(ttcInfo.predictions.stopTitle,width/2,(height/2)+(tSize/4)+60);
 }
